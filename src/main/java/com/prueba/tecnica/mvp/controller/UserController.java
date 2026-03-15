@@ -28,6 +28,7 @@ public UserController(UserServiceMemory userServiceMemory){
             @RequestParam(required = false) String sortedBy,
             @RequestParam(required = false) String filter
     ){
+        System.out.println("CONTROLLER FILTER RECEIVED: " + filter);
         return _userServiceMemory.filterAndSearch(sortedBy, filter);
     }
 

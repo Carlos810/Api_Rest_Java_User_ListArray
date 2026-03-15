@@ -99,14 +99,13 @@ public class UserServiceMemory {
         if(sortedBy != null && !sortedBy.isBlank()){
             boolean desc = sortedBy.startsWith("-");
             String field = desc ? sortedBy.substring(1) : sortedBy;
+
             Comparator<ModelUser> comparator = getComparator(field);
-            if(desc){
-                comparator = comparator.reversed();
-            }
-            stream = stream.sorted(comparator);
+            stream = stream.sorted(desc ? comparator.reversed() : comparator);
         }
 
-        System.out.println("FILTER ACTIVE: " + filter);
+        System.out.println("FILTER RECEIVED: [" + filter + "]");
+
         return stream.toList();
     }
 

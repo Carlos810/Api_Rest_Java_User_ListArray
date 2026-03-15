@@ -11,11 +11,11 @@ import java.util.stream.Stream;
 public class FilterUtil {
 
     public static Stream<ModelUser> applyFilter(Stream<ModelUser> stream, String filter){
-
-        String[] parts = filter.split("\\+");
-
+        System.out.println("start apply filter:  "+filter);
+        String[] parts = filter.split("[\\s+]+");
+        System.out.println("splitted apply filter:  "+java.util.Arrays.toString(parts));
         if(parts.length != 3){
-            throw new RuntimeException("Invalid filter format. Expected field+op+value");
+            throw new IllegalArgumentException("Invalid filter format. Expected field+op+value");
         }
 
         String field = parts[0];
