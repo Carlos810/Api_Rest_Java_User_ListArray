@@ -1,10 +1,24 @@
-# Users API – Technical Test Implementation
+# Spring Boot API (Users) – Keep it simple, but not simpler
+
+This project provides a simple and clear REST API for managing users.  
+The design follows the principle **"Keep it simple, but not simpler"**, focusing on readability, maintainability, and practical scalability.
+
+The codebase is structured to be:
+
+- Easy to read
+- Easy to debug
+- Easy to maintain
+- Easy to extend when the application grows
+
+The goal is not to over-engineer the solution, but to provide a clean and functional implementation that demonstrates good API design practices.
+
+## Technical Test Implementation
 
 ## Overview
 This project implements a REST API for user management using Spring Boot. The API supports CRUD operations and dynamic querying features such as filtering and sorting. The system uses in-memory storage, so no database configuration is required to run the project. Main features include: creating users, retrieving users, dynamic filtering, dynamic sorting, partial updates using PATCH, deleting users, field validation (email, phone, RFC), password encryption, global exception handling, and Swagger automatic API documentation.
 
 ## Technology Stack
-Java 17+, Spring Boot, Jakarta Validation, Lombok, Swagger/OpenAPI, Maven.
+Java 21+, Spring Boot, Jakarta Validation, Lombok, Swagger/OpenAPI, Maven.
 
 ## Project Structure
 controller – HTTP request handling  
